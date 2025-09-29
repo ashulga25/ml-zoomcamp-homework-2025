@@ -31,6 +31,6 @@ OR
 wget https://raw/githubusercontent.com/alexeygriforiev/datasets/master/car_fuel_efficiency.csv
 
 
-
-
+Theory notes:
+- check 01-intro\intro_notes.md
 
