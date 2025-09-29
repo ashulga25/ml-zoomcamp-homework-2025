@@ -286,19 +286,26 @@ n[:, 1]		- accessing the whole 2nd column:
 
 n[:]	- returns whole array
 
+n[0,1] = 20		# update single element of 2-dim array
 
 n[:, 2] = [0, 1, 2]		- reassign item in 2nd column
 
 n[:, 2]
 
 
+
+
+
 # Random generated arrays with np.random.rand()
 
 np.random.rand(5, 2)	- standard UNIFORM distribution
 
-np.random.seed(10)		- to get reproducsible results via fixing the seed
+np.random.rand(5, 2)	- different result upon second run
+
+np.random.seed(10)		- to get reproducible results via fixing the seed
 np.random.rand(5, 2)
 
+np.random.seed(10)		- to get reproducible results via fixing the seed
 np.random.rand(5, 2)	- standard NORMAL distribution
 
 
@@ -309,6 +316,10 @@ np.random.rand(5, 2)	- standard NORMAL distribution
 OR use another command:
 
 np.random.randint(low=0, high=100, size=(5, 2))		# generate 5 rows, 2 columns, from 0 to 99 (100 excluded)
+
+
+# fill array with zeros
+a = np.zeros(5)
 
 
 # Element wise-operations:
@@ -387,7 +398,7 @@ def vector_vector_multiplication(u, v):
   assert u.shape[0] = v.shape[0]
   
   u.shape[0] - is the size of array, the [0] element is array size.
-  That's why we need to make sure vestora have the same size.
+  That's why we need to make sure vestors have the same size.
   
   n = u.shape[o]
   results = 0.0
@@ -421,7 +432,7 @@ Utr2 * V = W2
 the dimensionality should be the same!
 
 
-$ def matrix_vector_multiplication(U, v):
+def matrix_vector_multiplication(U, v):
 	# we need to check the numnber of columns
 	# so we check that size of 2nd dimension of matrix matches the size of vector
   	assert U.shape[1] == v.shape[0]
@@ -436,9 +447,10 @@ $ def matrix_vector_multiplication(U, v):
 	return result
 
 
-In numpy we already have a function for it .dot()
+
+# In numpy we already have a function for it `.dot()`
 # dot function knows how to implement it
-$ U.dot(v)  
+ U.dot(v)  
 
 
 # Matrix-matrix multipliication
@@ -447,12 +459,13 @@ U = [[(2,4,5,6], [(1,2,1,2)], [(3, 1, 2, 1)]]
 
 V = [[(1, 1, 2], [(0, 0.5, 1)], [(0, 2, 1)], [(2, 1, 0)]]
 
-We take matrix V and brake in into columns and multiply it for matrix U to a vector V0, then U*v1, U*v2
+
+# We take matrix V and brake in into columns and multiply it for matrix U to a vector V0, then U*v1, U*v2
 Result is U*V = UV == [Uv0, Uv1, Uv2]
 
 
 
-$ def matrix_matrix_multipliication(U, V):
+def matrix_matrix_multipliication(U, V):
 	# we need to make sure that dimensions match
 		assert U.shape[1] == V.shape[0]
 			
@@ -468,7 +481,8 @@ $ def matrix_matrix_multipliication(U, V):
 		
 		return result
 	
-# same is implemented in numpy via .dot() function
+
+# The same is implemented in numpy via .dot() function
 $ U.dot(V)	
 
 
@@ -478,13 +492,13 @@ identity of matrix is like 1: x * 1 = x, 1 * x = x
 U * I = U  <==> I*U = U
 
 
-$ np.eye(10) - generates matrix size of 10, with 1 on diagonal and all other items are 0.
+np.eye(10) - generates matrix size of 10, with 1 on diagonal and all other items are 0.
 
 I = np.eye(3)
 V.dot(I) = returns V
 
 
-Matrix Inverse (only square matrix have inverse)
+# Matrix Inverse (only square matrix have inverse)
 
 A-1 * A = I (square matrix with 1 diagonal)
 

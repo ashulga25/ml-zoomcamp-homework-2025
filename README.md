@@ -27,6 +27,7 @@ import pandas as pd
 df = pd.read_csv('https://raw/githubusercontent.com/alexeygriforiev/datasets/master/car_fuel_efficiency.csv')
 df.head()
 
+len(df)
 OR
 wget https://raw/githubusercontent.com/alexeygriforiev/datasets/master/car_fuel_efficiency.csv
 
