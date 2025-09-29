@@ -703,3 +703,25 @@ df.MSRP.value		# returns a list
 df.to_dict(orient='records')		# returns a json, which we can save to a file
 
 Completed.
+
+
+# Homework notes
+
+pip list  
+
+and get the version: 2.3.1
+
+Q1: 2.3.1
+Q2. Records count: 9704
+Q3. types of fuel: 2 (gasoline and diesel)
+Q4. How many columns in the dataset have missing values? 4
+Q5: Fuel efficiency: 23.75
+Q6 - After filling the NaN fields of the horsepower column with the most frequent value
+	of that column - the Median value of horsepower column has increased. It was obvious, as
+	the mode (most frequest value) was larger than the median (mean) value. By updating about
+	700+ records with the value (152) larger than median value (149) in the dataset of 9704 
+	records - > we definitely move the distribution closer to the most frequent value.
+	
+	Answer is `Yes, it increased`
+
+Q7 - Sum of weights: result close to 0.51
