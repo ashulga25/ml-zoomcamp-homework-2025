@@ -1,0 +1,22 @@
+
+
+original: np.float64(0.7385844748858448)
+
+train and check over initial data:
+
+no industry np.float64(0.7408675799086758)
+no employment_status np.float64(0.7363013698630136)
+no lead_score np.float64(0.7420091324200914)
+
+smallest difference
+
+train and check over VAL data:
+no industry - np.float64(0.6996587030716723)
+no_employment - np.float64(0.6962457337883959)
+no_lead_score - np.float64(0.7064846416382252)
+
+industry 0.03892577181417245
+
+empl_status 0.04233874109744884
+
+lead_score 0.03209983324761956
